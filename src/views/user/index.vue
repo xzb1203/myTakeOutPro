@@ -1,5 +1,5 @@
 <template>
-  <div style="padding:15px">
+  <div class="app-content">
     <el-button-group>
       <el-button icon="el-icon-delete" @click="batchDel">批量删除</el-button>
       <el-button icon="el-icon-circle-plus-outline" @click="addUser">添加账号</el-button>

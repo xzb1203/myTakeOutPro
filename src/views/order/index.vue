@@ -1,5 +1,5 @@
 <template>
-  <div style="padding:15px">
+  <div class="app-content">
     <!-- 搜索组件 -->
     <Search :rest="rest" @getQuery="getQuery" />
     <!-- 表格 -->

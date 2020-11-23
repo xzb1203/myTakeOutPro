@@ -1,5 +1,6 @@
 // import parseTime, formatTime and set to filter
 export { parseTime, formatTime } from '@/utils'
+import { time } from '@/utils/time'
 
 /**
  * Show plural label if time is plural number
@@ -70,5 +71,9 @@ export function uppercaseFirst(string) {
 // 过滤器测试
 export function myName(val) {
   return val + '许钊彬'
+}
+// 时间格式化
+export function formattingTime(val) {
+  return time(val)
 }
 

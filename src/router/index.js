@@ -103,12 +103,32 @@ export const asyncRoutes = [
   //     }
   //   ]
   // },
+  { path: '/goods',
+    component: Layout,
+    meta: {
+      icon: 'shopping',
+      title: '商品管理',
+      roles: ['admin']
+    },
+    children: [
+      {
+        path: 'goodsList',
+        component: () => import('@/views/goods/goodsList'),
+        name: 'goodsList',
+        meta: { title: '商品列表', noCache: true, icon: 'list' }
+      },
+      {
+        path: 'goodsClass',
+        component: () => import('@/views/goods/goodsClass'),
+        name: 'goodsClass',
+        meta: { title: '商品分类', noCache: true, icon: 'nested' }
+      }
+    ]
+  },
   { path: '/order',
     component: Layout,
-    redirect: 'noRedirect',
     meta: {
-      title: 'Order',
-      icon: 'shopping'
+      icon: 'component'
     },
     children: [
       {
@@ -121,9 +141,7 @@ export const asyncRoutes = [
   },
   { path: '/user',
     component: Layout,
-    redirect: 'noRedirect',
     meta: {
-      title: '账号管理',
       icon: 'user',
       roles: ['admin']
 
@@ -137,6 +155,23 @@ export const asyncRoutes = [
       }
     ]
   },
+  { path: '/shop',
+    component: Layout,
+    meta: {
+      icon: 'tree-table',
+      roles: ['admin']
+
+    },
+    children: [
+      {
+        path: 'mix-user',
+        component: () => import('@/views/shop/index'),
+        name: 'Shop',
+        meta: { title: '店铺管理', noCache: true }
+      }
+    ]
+  },
+
   chartsRouter,
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
