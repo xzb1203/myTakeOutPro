@@ -106,13 +106,11 @@ export default {
     },
     // 每页条数
     handleSizeChange(val) {
-      console.log(val)
       this.pageSize = val
       this.fetchData()
     },
     // 当前页
     handleCurrentChange(val) {
-      console.log(val)
       this.currentPage = val
       this.fetchData()
     },

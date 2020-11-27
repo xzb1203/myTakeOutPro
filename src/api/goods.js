@@ -39,3 +39,32 @@ export function goodsDelcate(id) {
     params: { id }
   })
 }
+// 添加分类
+/**
+ *
+ * @param {String} cateName
+ * @param {Boolean} state
+ */
+export function goodsAddcate(data) {
+  return request({
+    url: '/goods/addcate',
+    method: 'post',
+    data
+  })
+}
+// 查询所有分类名称
+export function goodsCategories(params) {
+  return request({
+    url: '/goods/categories',
+    method: 'get',
+    params
+  })
+}
+// 添加商品
+export function goodsAdd(data) {
+  return request({
+    url: '/goods/add',
+    method: 'post',
+    data
+  })
+}
