@@ -7,3 +7,11 @@ export function shopInfo(params) {
     params
   })
 }
+// 店铺内容修改
+export function shopEdit(data) {
+  return request({
+    url: '/shop/edit',
+    method: 'post',
+    data
+  })
+}

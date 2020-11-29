@@ -95,6 +95,8 @@
 
 <script>
 import { goodsList, goodsDel } from '@/api/goods'
+import { goodsImgUrl } from '@/utils/ImgUrl'
+
 import Dilog from './Dilog'
 export default {
   name: 'GoodsList',
@@ -107,7 +109,7 @@ export default {
       currentPage: 1,
       pageSize: 5,
       total: 0,
-      serverUrl: 'http://127.0.0.1:5000/upload/imgs/goods_img/'// 图片地址
+      serverUrl: goodsImgUrl// 图片地址
     }
   },
   created() {

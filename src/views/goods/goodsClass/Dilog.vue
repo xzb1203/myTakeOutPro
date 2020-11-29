@@ -41,7 +41,7 @@
             :show-file-list="false"
             :on-success="handleAvatarSuccess"
           >
-            <img v-if="ruleForm2.imgUrl" :src="'http://127.0.0.1:5000/upload/imgs/goods_img/'+ruleForm2.imgUrl" class="avatar">
+            <img v-if="ruleForm2.imgUrl" :src="goodsImgUrl+ruleForm2.imgUrl" class="avatar">
             <i v-else class="el-icon-plus avatar-uploader-icon" />
           </el-upload>
         </el-form-item>
@@ -58,6 +58,8 @@
 </template>
 <script>
 import { goodsAddcate, goodsCategories, goodsAdd } from '@/api/goods'
+import { goodsImgUrl } from '@/utils/ImgUrl'
+
 export default {
   data() {
     return {
@@ -67,7 +69,7 @@ export default {
       ruleForm2: {},
       dilog: false,
       selectList: [],
-      url: 'http://127.0.0.1:5000/upload/imgs/goods_img',
+      goodsImgUrl,
       serverUrl: 'http://127.0.0.1:5000/goods/goods_img_upload'// 图片地址
 
     }

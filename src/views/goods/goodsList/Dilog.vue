@@ -31,12 +31,13 @@
 </template>
 
 <script>
+import { goodsImgUrl } from '@/utils/ImgUrl'
 export default {
   data() {
     return {
       dialogVisible: false,
       fromData: null,
-      serverUrl: 'http://127.0.0.1:5000/upload/imgs/goods_img/'// 图片地址
+      serverUrl: goodsImgUrl// 图片地址
     }
   },
   methods: {
